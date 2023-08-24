@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    title Brand FX
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="./css/reset.css")
+    link(rel="stylesheet", href="./css/styles.css")
+
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css")
+    script(src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js")
+
+  body
+    header
+      div.container
+        a.logo(href='/')
+          img(src='./assets/images/logo.png', alt='gift foundation')
+        button.menu-button MENU
+        nav
+          ul
+            li
+              a(href='#') Home
+            li
+              a(href='#') About
+            li
+              a(href='#') Products
+            li
+              a(href='#') Contact
+
+    main.swiper
+      .swiper-wrapper
+        section.swiper-slide#hero-section
+          h1 Im hero
+        section.swiper-slide#fund-raising
+          h2 Im hero too
+        section.swiper-slide#achievements
+          h2 Im also a hero
+
+
+    script(src="./js/app.js")
+              

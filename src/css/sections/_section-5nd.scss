@@ -1,0 +1,19 @@
+#section-5 {
+  background-color: var(--black-color);
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .intro {
+      font-size: 8em;
+      line-height: 0.925;
+      font-weight: 300;
+    }
+
+    @include breakpoint($breakpoint-md) {
+      font-size: 0.8rem;
+    }
+  }
+}

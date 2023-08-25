@@ -1,4 +1,27 @@
 #hero-section {
   background-image: url('../assets/images/hero-bg.png');
   background-size: cover;
+
+  .content {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+
+    .intro {
+      font-size: 6em;
+      line-height: 1.22;
+    }
+
+    .description {
+      font-size: 2em;
+      line-height: 1.9;
+      max-width: 88rem;
+    }
+
+    @include breakpoint($breakpoint-md) {
+      font-size: 0.8rem;
+    }
+  }
 }

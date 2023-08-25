@@ -30,12 +30,16 @@ html(lang="en")
 
     main.swiper
       .swiper-wrapper
-        section.swiper-slide#hero-section
-          h1 Im hero
-        section.swiper-slide#fund-raising
-          h2 Im hero too
-        section.swiper-slide#achievements
-          h2 Im also a hero
+        //- include ./sections/_hero-section.jade
+        //- include ./sections/_fund-raising-section.jade
+        //- include ./sections/_achievements-section.jade
+        //- include ./sections/_section-4nd.jade
+        include ./sections/_section-5nd.jade
+
+        //- section.swiper-slide#fund-raising
+        //-   h2 Im hero too
+        //- section.swiper-slide#achievements
+        //-   h2 Im also a hero
 
 
     script(src="./js/app.js")

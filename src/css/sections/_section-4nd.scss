@@ -1,0 +1,25 @@
+#section-4 {
+  background-color: var(--black-color);
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .intro {
+      font-family: 'PTSerif';
+      font-weight: bold;
+      font-size: 5em;
+    }
+
+    .right-col {
+      img {
+        max-width: 500px;
+      }
+    }
+
+    @include breakpoint($breakpoint-md) {
+      font-size: 0.8rem;
+    }
+  }
+}

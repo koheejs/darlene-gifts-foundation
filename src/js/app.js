@@ -26,7 +26,7 @@
   const swiper = new Swiper('main', {
     direction: 'vertical',
     mousewheel: true,
-    freeMode: true,
+    // freeMode: true,
     breakpoints: {
       768: {
         direction: 'horizontal',

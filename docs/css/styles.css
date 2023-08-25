@@ -1,29 +1,75 @@
 :root {
   --primary-color: #051faa;
-  --secondary-color: #255ceb;
+  --secondary-color: #98e6ff;
   --white-color: #ffffff;
   --black-color: #060606;
   --dark-color: #081925;
+  --header-top: 6rem;
+  --header-height: 10rem;
 }
 
+@media only screen and (max-width: 1200px) {
+  :root {
+    --header-top: 4rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  :root {
+    --header-top: 2rem;
+  }
+}
 @font-face {
   font-family: "Jarkata";
-  src: url(../assets/fonts/PlusJakartaSans-Regular.ttf);
-  font-weight: 400;
+  src: url(../assets/fonts/PlusJakartaSans-Regular.ttf) format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Jarkata";
-  src: url(../assets/fonts/PlusJakartaSans-SemiBold.ttf);
+  src: url(../assets/fonts/PlusJakartaSans-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jarkata";
+  src: url(../assets/fonts/PlusJakartaSans-Bold.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Jarkata";
-  src: url(../assets/fonts/PlusJakartaSans-Bold.ttf);
+  src: url(../assets/fonts/PlusJakartaSans-ExtraBold.ttf) format("truetype");
   font-weight: 800;
   font-style: normal;
 }
+@font-face {
+  font-family: "Josefin";
+  src: url(../assets/fonts/JosefinSans-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Josefin";
+  src: url(../assets/fonts/JosefinSans-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "PTSerif";
+  src: url(../assets/fonts/PTSerif-Italic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "PTSerif";
+  src: url(../assets/fonts/PTSerif-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -41,6 +87,9 @@ body {
   color: var(--white-color);
   background-color: var(--black-color);
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 
 body.freeze-body {
@@ -68,6 +117,10 @@ h3 {
   font-size: 2.4rem;
 }
 
+strong {
+  font-weight: 700;
+}
+
 button {
   border: none;
   color: var(--white-color);
@@ -86,6 +139,19 @@ img {
   .container {
     padding: 0 3rem;
   }
+}
+
+.font-pt {
+  font-family: "PTSerif";
+  font-style: italic;
+}
+
+.font-josefin {
+  font-family: Josefin;
+}
+
+.text-light {
+  font-weight: 300;
 }
 
 .text-center {
@@ -112,10 +178,10 @@ header {
   padding: 2rem 0;
   font-size: 2.4rem;
   position: fixed;
-  top: 6rem;
+  height: var(--header-height);
+  top: var(--header-top);
   left: 0;
   right: 0;
-  height: 100px;
   z-index: 50;
 }
 header .container {
@@ -149,23 +215,178 @@ header nav {
 body > main {
   height: 100vh;
 }
-body > main > section {
-  width: 100vw;
+
+section .container {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+section .content {
+  font-size: 1rem;
+  height: 100%;
+  padding-top: calc(var(--header-top) + var(--header-height));
 }
 
 #hero-section {
   background-image: url("../assets/images/hero-bg.png");
   background-size: cover;
 }
+#hero-section .content {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+#hero-section .content .intro {
+  font-size: 6em;
+  line-height: 1.22;
+}
+#hero-section .content .description {
+  font-size: 2em;
+  line-height: 1.9;
+  max-width: 88rem;
+}
+@media only screen and (max-width: 992px) {
+  #hero-section .content {
+    font-size: 0.8rem;
+  }
+}
 
 #fund-raising {
   background-color: var(--black-color);
 }
+#fund-raising .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#fund-raising .content .intro {
+  font-size: 4em;
+  line-height: 1.16;
+  margin-bottom: 4rem;
+}
+#fund-raising .content .description {
+  font-size: 2em;
+  line-height: 1.9;
+  max-width: 88rem;
+}
+@media only screen and (max-width: 1200px) {
+  #fund-raising .content {
+    font-size: 0.8rem;
+  }
+}
+#fund-raising .content .top .intro {
+  max-width: 950px;
+}
+#fund-raising .content .top .amount {
+  font-family: PTSerif;
+  font-weight: bold;
+  font-size: 10em;
+  line-height: 0.65;
+}
+#fund-raising .content .top .amount .unit {
+  font-family: Jarkata;
+  font-weight: normal;
+  font-size: 2rem;
+}
+#fund-raising .content .bottom {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+#fund-raising .content .bottom .font-pt {
+  font-size: 2em;
+  max-width: 678px;
+}
 
 #achievements {
-  background-color: var(--dark-color);
+  background-color: var(--black-color);
+}
+#achievements .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#achievements .content .intro {
+  text-align: center;
+  font-size: 4em;
+  line-height: 1.16;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+#achievements .data-set {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  row-gap: 4rem;
+  column-gap: 1rem;
+}
+@media only screen and (max-width: 768px) {
+  #achievements .data-set {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 576px) {
+  #achievements .data-set {
+    grid-template-columns: 1fr;
+  }
+}
+#achievements .data-set .item {
+  text-align: center;
+}
+#achievements .data-set .item .number {
+  font-weight: 800;
+  font-size: 5em;
+  margin-bottom: 3rem;
+  color: var(--secondary-color);
+}
+#achievements .data-set .item .number span {
+  font-size: 0.4em;
+  font-family: PTSerif;
+  font-style: italic;
+}
+#achievements .data-set .item .desc {
+  font-size: 1.5em;
+}
+
+#section-4 {
+  background-color: var(--black-color);
+}
+#section-4 .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#section-4 .content .intro {
+  font-family: "PTSerif";
+  font-weight: bold;
+  font-size: 5em;
+}
+#section-4 .content .right-col img {
+  max-width: 500px;
+}
+@media only screen and (max-width: 992px) {
+  #section-4 .content {
+    font-size: 0.8rem;
+  }
+}
+
+#section-5 {
+  background-color: var(--black-color);
+}
+#section-5 .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section-5 .content .intro {
+  font-size: 8em;
+  line-height: 0.925;
+  font-weight: 300;
+}
+@media only screen and (max-width: 992px) {
+  #section-5 .content {
+    font-size: 0.8rem;
+  }
 }

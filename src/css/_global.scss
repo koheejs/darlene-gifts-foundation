@@ -4,28 +4,82 @@
   --white-color: #{$white-color};
   --black-color: #{$black-color};
   --dark-color: #{$dark-color};
+
+  --header-top: 6rem;
+  --header-height: 10rem;
+}
+
+@include breakpoint($breakpoint-lg) {
+  :root {
+    --header-top: 4rem;
+  }
+}
+
+@include breakpoint($breakpoint-md) {
+  :root {
+    --header-top: 2rem;
+  }
 }
 
 // Fonts
 @font-face {
   font-family: 'Jarkata';
-  src: url(../assets/fonts/PlusJakartaSans-Regular.ttf);
-  font-weight: 400;
+  src: url(../assets/fonts/PlusJakartaSans-Regular.ttf) format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Jarkata';
-  src: url(../assets/fonts/PlusJakartaSans-SemiBold.ttf);
+  src: url(../assets/fonts/PlusJakartaSans-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jarkata';
+  src: url(../assets/fonts/PlusJakartaSans-Bold.ttf) format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Jarkata';
-  src: url(../assets/fonts/PlusJakartaSans-Bold.ttf);
+  src: url(../assets/fonts/PlusJakartaSans-ExtraBold.ttf) format('truetype');
   font-weight: 800;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url(../assets/fonts/JosefinSans-Regular.ttf) format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url(../assets/fonts/JosefinSans-Bold.ttf) format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: url(../assets/fonts/PTSerif-Italic.ttf) format('truetype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: url(../assets/fonts/PTSerif-Bold.ttf) format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -43,6 +97,10 @@ body {
   color: var(--white-color);
   background-color: var(--black-color);
   scroll-behavior: smooth;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 
 body.freeze-body {
@@ -70,6 +128,10 @@ h3 {
   font-size: 2.4rem;
 }
 
+strong {
+  font-weight: 700;
+}
+
 button {
   border: none;
   color: var(--white-color);
@@ -90,6 +152,19 @@ img {
 }
 
 // Utilities
+.font-pt {
+  font-family: 'PTSerif';
+  font-style: italic;
+}
+
+.font-josefin {
+  font-family: Josefin;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
 .text-center {
   text-align: center;
 }
@@ -115,10 +190,10 @@ header {
   padding: 2rem 0;
   font-size: 2.4rem;
   position: fixed;
-  top: 6rem;
+  height: var(--header-height);
+  top: var(--header-top);
   left: 0;
   right: 0;
-  height: 100px;
   z-index: 50;
 
   .container {
@@ -155,14 +230,16 @@ header {
 
 body > main {
   height: 100vh;
-  // scroll-behavior: smooth;
+}
 
-  & > section {
-    width: 100vw;
+section {
+  .container {
     height: 100%;
-    // temporarily
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+
+  .content {
+    font-size: 1rem;
+    height: 100%;
+    padding-top: calc(var(--header-top) + var(--header-height));
   }
 }

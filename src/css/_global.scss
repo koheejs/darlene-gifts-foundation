@@ -78,6 +78,13 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: 'PTSerif';
+  src: url(../assets/fonts/PTSerif-BoldItalic.ttf) format('truetype');
+  font-style: italic;
+  font-weight: bold;
+}
+
 * {
   box-sizing: border-box;
 }

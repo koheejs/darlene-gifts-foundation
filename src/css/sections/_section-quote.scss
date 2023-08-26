@@ -1,0 +1,48 @@
+.section-quote {
+  background-size: cover;
+  background-position: center;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .intro {
+      font-size: 8em;
+      line-height: 0.925;
+      font-weight: 300;
+    }
+
+    @include breakpoint($breakpoint-md) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+#section-5 {
+  background-image: url('../assets/images/section5-bg.png');
+}
+
+#section-12 {
+  background-image: url('../assets/images/section12-bg.png');
+  .content {
+    .intro {
+      max-width: 1110px;
+    }
+  }
+}
+
+#section-22 {
+  background-image: url('../assets/images/section22-bg.png');
+  .content {
+    .intro {
+      font-size: 6em;
+      line-height: 1.183;
+      max-width: 1250px;
+    }
+  }
+}
+
+#section-24 {
+  background-image: url('../assets/images/section24-bg.png');
+}

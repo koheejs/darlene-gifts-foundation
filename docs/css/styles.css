@@ -66,6 +66,12 @@
   font-style: normal;
   font-weight: bold;
 }
+@font-face {
+  font-family: "PTSerif";
+  src: url(../assets/fonts/PTSerif-BoldItalic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
 * {
   box-sizing: border-box;
 }
@@ -350,43 +356,135 @@ section .content {
   font-size: 1.5em;
 }
 
-#section-4 {
-  background-color: var(--black-color);
-}
-#section-4 .content {
+.content-default .content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  gap: 4rem;
 }
-#section-4 .content .intro {
+.content-default .content .left-col,
+.content-default .content .right-col {
+  width: 50%;
+}
+.content-default .content .left-col img,
+.content-default .content .right-col img {
+  max-width: 100%;
+  max-height: 700px;
+}
+.content-default .content .title {
   font-family: "PTSerif";
   font-weight: bold;
   font-size: 5em;
+  margin-bottom: 4rem;
 }
-#section-4 .content .right-col img {
-  max-width: 500px;
+.content-default .content .intro {
+  font-size: 1.8em;
+  line-height: 1.83;
+}
+.content-default .content .caption {
+  margin-top: 1.4rem;
+  font-size: 1.5em;
+  text-align: right;
 }
 @media only screen and (max-width: 992px) {
-  #section-4 .content {
+  .content-default .content {
     font-size: 0.8rem;
   }
 }
 
-#section-5 {
+#section-6 {
   background-color: var(--black-color);
+  background-image: url("../assets/images/section6-bg.png");
+  background-size: 50% 100%;
+  background-position: top right;
+  background-repeat: no-repeat;
 }
-#section-5 .content {
+#section-6 .left-col {
+  padding-right: 4rem;
+}
+
+#section-11 .content img {
+  max-height: 540px;
+}
+
+#section-16 .content .caption {
+  max-width: 390px;
+  margin-left: auto;
+}
+
+#section-17 {
+  background-color: var(--black-color);
+  background-image: url("../assets/images/section17-bg.png");
+  background-size: 50% 100%;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+#section-17 .left-col {
+  padding-right: 4rem;
+}
+#section-17 .left-col img {
+  max-width: 400px;
+}
+
+.section-quote {
+  background-size: cover;
+  background-position: center;
+}
+.section-quote .content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#section-5 .content .intro {
+.section-quote .content .intro {
   font-size: 8em;
   line-height: 0.925;
   font-weight: 300;
 }
 @media only screen and (max-width: 992px) {
-  #section-5 .content {
+  .section-quote .content {
+    font-size: 0.8rem;
+  }
+}
+
+#section-5 {
+  background-image: url("../assets/images/section5-bg.png");
+}
+
+#section-12 {
+  background-image: url("../assets/images/section12-bg.png");
+}
+#section-12 .content .intro {
+  max-width: 1110px;
+}
+
+#section-22 {
+  background-image: url("../assets/images/section22-bg.png");
+}
+#section-22 .content .intro {
+  font-size: 6em;
+  line-height: 1.183;
+  max-width: 1250px;
+}
+
+#section-24 {
+  background-image: url("../assets/images/section24-bg.png");
+}
+
+#section-8 {
+  background-color: var(--black-color);
+}
+#section-8 .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section-8 .content .intro {
+  font-size: 8em;
+  line-height: 0.925;
+  font-weight: 300;
+}
+@media only screen and (max-width: 992px) {
+  #section-8 .content {
     font-size: 0.8rem;
   }
 }

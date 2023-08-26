@@ -26,3 +26,13 @@ $dark-color: #081925;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin fontSerifBold() {
+  font-family: 'PTSerif';
+  font-weight: bold;
+}
+
+@mixin fontSerifItalic() {
+  font-family: 'PTSerif';
+  font-style: italic;
+}

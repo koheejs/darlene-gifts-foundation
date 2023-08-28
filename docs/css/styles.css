@@ -469,6 +469,9 @@ section .content {
 #section-24 {
   background-image: url("../assets/images/section24-bg.png");
 }
+#section-24 .content .intro {
+  line-height: 1.125;
+}
 
 #section-8 {
   background-color: var(--black-color);
@@ -487,4 +490,103 @@ section .content {
   #section-8 .content {
     font-size: 0.8rem;
   }
+}
+
+#section-21 .content {
+  display: flex;
+  align-items: center;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+#section-21 .content .thumb {
+  padding: 0 2rem;
+  text-align: center;
+  width: 33.3333333333%;
+}
+@media only screen and (max-width: 768px) {
+  #section-21 .content {
+    flex-direction: column;
+  }
+  #section-21 .content .thumb {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}
+#section-21 .content img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+#section-23 .content {
+  display: flex;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-bottom: 8rem;
+}
+#section-23 .content .col {
+  width: 33.3333333333%;
+  padding: 0 4rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#section-23 .content .col:not(:last-child) {
+  border-right: 1px solid var(--white-color);
+}
+#section-23 .content .wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#section-23 .content .title {
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+#section-23 .content .intro {
+  font-size: 1.5em;
+  line-height: 1.87;
+}
+@media only screen and (max-width: 1200px) {
+  #section-23 .content .title {
+    font-size: 3.4em;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #section-23 .content {
+    flex-direction: column;
+  }
+  #section-23 .content .col {
+    width: 100%;
+  }
+  #section-23 .content .col:not(:last-child) {
+    border: none;
+  }
+}
+
+#section-last .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#section-last .title {
+  font-size: 6em;
+  line-height: 1.2167;
+  text-align: center;
+  padding-bottom: 6rem;
+  border-bottom: 3px solid var(--white-color);
+}
+#section-last .social {
+  padding: 6rem 0;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+}
+#section-last .social img {
+  width: 70px;
+  height: 70px;
 }

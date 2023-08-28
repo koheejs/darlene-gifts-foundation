@@ -307,7 +307,8 @@ section .content {
 }
 
 #achievements {
-  background-color: var(--black-color);
+  background-image: url("../assets/images/section3-bg.png");
+  background-size: cover;
 }
 #achievements .content {
   display: flex;
@@ -318,8 +319,8 @@ section .content {
   text-align: center;
   font-size: 4em;
   line-height: 1.16;
-  margin-bottom: 4rem;
-  margin-top: 4rem;
+  margin-bottom: 8rem;
+  margin-top: 8rem;
 }
 #achievements .data-set {
   display: grid;

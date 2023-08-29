@@ -20,8 +20,21 @@
       max-width: 88rem;
     }
 
-    @include breakpoint($breakpoint-md) {
+    @include breakpoint($breakpoint-lg) {
       font-size: 0.8rem;
+    }
+
+    @include breakpoint($breakpoint-xs) {
+      .intro {
+        font-size: 4em;
+      }
+    }
+
+    @include screenheight($breakpoint-xs) {
+      display: block;
+      .intro {
+        margin-bottom: 2rem;
+      }
     }
   }
 }

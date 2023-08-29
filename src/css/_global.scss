@@ -7,17 +7,26 @@
 
   --header-top: 6rem;
   --header-height: 10rem;
+  --header-nav-bottom: 94px;
 }
 
 @include breakpoint($breakpoint-lg) {
   :root {
     --header-top: 4rem;
+    --header-nav-bottom: 70px;
   }
 }
 
 @include breakpoint($breakpoint-md) {
   :root {
-    --header-top: 2rem;
+    --header-top: 0px;
+    --header-height: 8rem;
+  }
+}
+
+@include screenheight($breakpoint-sm) {
+  :root {
+    --header-nav-bottom: 40px;
   }
 }
 
@@ -158,6 +167,11 @@ img {
   }
 }
 
+button {
+  outline: none;
+  box-shadow: none;
+}
+
 // Utilities
 .font-pt {
   font-family: 'PTSerif';
@@ -197,7 +211,7 @@ header {
   padding: 2rem 0;
   font-size: 2.4rem;
   position: fixed;
-  height: var(--header-height);
+  // height: var(--header-height);
   top: var(--header-top);
   left: 0;
   right: 0;
@@ -213,6 +227,10 @@ header {
     display: block;
     width: 240px;
     flex-shrink: 0;
+
+    @include breakpoint($breakpoint-xs) {
+      width: 180px;
+    }
   }
 
   .menu-button {
@@ -223,15 +241,63 @@ header {
     font-size: 15px;
     background-color: var(--primary-color);
     cursor: pointer;
+
+    @include breakpoint($breakpoint-md) {
+      width: 100px;
+      height: 40px;
+      font-size: 10px;
+    }
   }
 
   nav {
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: var(--header-nav-bottom);
+    background-color: var(--primary-color);
     width: 100%;
-    display: none;
+    height: 100%;
+    max-height: 0;
+    transition: max-height 0.5s;
+    overflow: hidden;
+
+    &.active {
+      max-height: min(420px, 80%);
+      border-bottom: 2px solid var(--white-color);
+    }
+
+    &::before {
+      content: '';
+      height: var(--header-nav-bottom);
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: var(--primary-color);
+    }
+  }
+
+  .nav-items {
+    position: absolute;
+    bottom: 60px;
+    right: 290px;
+    text-align: right;
+    font-size: 3.5rem;
+    line-height: 1.314;
+  }
+
+  .donate-cta {
+    position: absolute;
+    @include square(144px);
+    border-radius: 50%;
+    background-color: var(--black-color);
+    bottom: 40px;
+    right: 120px;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 144px;
+    font-weight: bold;
   }
 }
 
@@ -246,7 +312,15 @@ section {
 
   .content {
     font-size: 1rem;
-    height: 100%;
-    padding-top: calc(var(--header-top) + var(--header-height));
+    padding: 2rem 0;
+    margin-top: calc(var(--header-top) + var(--header-height));
+    height: calc(
+      100% - var(--header-nav-bottom) - var(--header-top) - var(--header-height)
+    );
+    overflow-y: auto;
+
+    @include breakpoint($breakpoint-lg) {
+      font-size: 0.8rem;
+    }
   }
 }

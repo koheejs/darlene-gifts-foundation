@@ -16,6 +16,12 @@ $dark-color: #081925;
   }
 }
 
+@mixin screenheight($breakpoint) {
+  @media only screen and (max-height: $breakpoint) {
+    @content;
+  }
+}
+
 @mixin square($size) {
   width: $size;
   height: $size;

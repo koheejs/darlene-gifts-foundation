@@ -18,10 +18,6 @@
       max-width: 88rem;
     }
 
-    @include breakpoint($breakpoint-lg) {
-      font-size: 0.8rem;
-    }
-
     .top {
       .intro {
         max-width: 950px;
@@ -48,9 +44,45 @@
       align-items: flex-end;
       justify-content: flex-end;
 
+      .intro {
+        margin-bottom: 4rem;
+        @include breakpoint($breakpoint-lg) {
+          margin-bottom: 2rem;
+        }
+      }
+
       .font-pt {
         font-size: 2em;
         max-width: 678px;
+      }
+    }
+
+    @include breakpoint($breakpoint-lg) {
+      font-size: 0.6rem;
+      .top {
+        .amount {
+          font-size: 8em;
+        }
+      }
+      .bottom {
+        .font-pt {
+          font-size: 2.6em;
+        }
+      }
+    }
+
+    @include breakpoint($breakpoint-sm) {
+      .top {
+        .amount {
+          font-size: 7em;
+        }
+      }
+    }
+
+    @include screenheight($breakpoint-xs) {
+      display: block;
+      .top {
+        margin-bottom: 2rem;
       }
     }
   }

@@ -1,9 +1,30 @@
 .content-default {
+  .half-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+  }
+
+  @include breakpoint($breakpoint-xs) {
+    .half-bg {
+      top: 50%;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
   .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
+    position: relative;
 
     .left-col,
     .right-col {
@@ -31,18 +52,69 @@
       text-align: right;
     }
 
-    @include breakpoint($breakpoint-md) {
-      font-size: 0.8rem;
+    @include breakpoint($breakpoint-sm) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+
+      .left-col,
+      .right-col {
+        width: 100%;
+        max-width: 500px;
+
+        img {
+          max-width: 300px;
+        }
+      }
+
+      .title {
+        font-size: 4em;
+        margin-bottom: 1rem;
+      }
+    }
+
+    @include breakpoint($breakpoint-xs) {
+      display: block;
+      .left-col,
+      .right-col {
+        margin: 2rem 0;
+      }
     }
   }
 }
 
 #section-6 {
   background-color: var(--black-color);
-  background-image: url('../assets/images/section6-bg.png');
-  background-size: 50% 100%;
-  background-position: top right;
-  background-repeat: no-repeat;
+
+  .half-bg {
+    background-image: url('../assets/images/section6-bg.png');
+  }
+
+  @include breakpoint($breakpoint-sm) {
+    .content {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 2rem;
+
+      .left-col {
+        width: 50%;
+      }
+
+      .title {
+        font-size: 4em;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @include breakpoint($breakpoint-xs) {
+    .content {
+      display: block;
+      .left-col {
+        width: 100%;
+      }
+    }
+  }
 
   .left-col {
     padding-right: 4rem;
@@ -67,11 +139,15 @@
 }
 
 #section-17 {
-  background-color: var(--black-color);
-  background-image: url('../assets/images/section17-bg.png');
-  background-size: 50% 100%;
-  background-position: top right;
-  background-repeat: no-repeat;
+  .half-bg {
+    background-image: url('../assets/images/section17-bg.png');
+  }
+
+  @include breakpoint($breakpoint-xs) {
+    .half-bg {
+      top: 55%;
+    }
+  }
 
   .left-col {
     padding-right: 4rem;

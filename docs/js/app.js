@@ -6,21 +6,22 @@
  * =================================================================
  */
 
-// (function menuMobile() {
-//   const classActive = 'active';
-//   const menuButton = document.querySelector('.menu-burger');
-//   const navigation = document.querySelector('.header-nav');
-//   menuButton.addEventListener('click', function () {
-//     navigation.classList.toggle(classActive);
-//   });
+(function headerNavigator() {
+  const classActive = 'active';
+  const menuButton = document.querySelector('.menu-button');
+  const navigation = document.querySelector('.site-nav');
+  menuButton.addEventListener('click', function () {
+    console.log('dsadsa');
+    navigation.classList.toggle(classActive);
+  });
 
-//   const navigationItems = navigation.querySelectorAll('a');
-//   navigationItems.forEach(function (item) {
-//     item.addEventListener('click', function () {
-//       navigation.classList.toggle(classActive);
-//     });
-//   });
-// })();
+  const navigationItems = navigation.querySelectorAll('a');
+  navigationItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      navigation.classList.toggle(classActive);
+    });
+  });
+})();
 
 (function scrollEffect() {
   const swiper = new Swiper('main', {

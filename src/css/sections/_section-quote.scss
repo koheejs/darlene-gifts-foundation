@@ -16,6 +16,18 @@
     @include breakpoint($breakpoint-md) {
       font-size: 0.8rem;
     }
+
+    @include breakpoint($breakpoint-sm) {
+      .intro {
+        font-size: 6em;
+      }
+    }
+
+    @include breakpoint($breakpoint-xs) {
+      .intro {
+        font-size: 4em;
+      }
+    }
   }
 }
 
@@ -39,6 +51,12 @@
       font-size: 6em;
       line-height: 1.183;
       max-width: 1250px;
+    }
+
+    @include breakpoint($breakpoint-sm) {
+      .intro {
+        font-size: 4em;
+      }
     }
   }
 }

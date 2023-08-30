@@ -497,7 +497,6 @@ section .content {
   bottom: 0;
   background-size: cover;
   background-position: center center;
-  z-index: -1;
 }
 @media only screen and (max-width: 576px) {
   .content-default .half-bg {
@@ -530,7 +529,7 @@ section .content {
   margin-bottom: 4rem;
 }
 .content-default .content .intro {
-  font-size: 1.8em;
+  font-size: 2em;
   line-height: 1.83;
 }
 .content-default .content .caption {
@@ -600,13 +599,35 @@ section .content {
   padding-right: 4rem;
 }
 
+#section-6 .intro {
+  max-width: 510px;
+}
+
 #section-11 .content img {
   max-height: 540px;
 }
 
+#section-13 .intro {
+  max-width: 470px;
+}
+
+#section-14 .intro {
+  max-width: 510px;
+}
+
+#section-15 .intro {
+  max-width: 500px;
+}
+
+#section-16 .content .left-col {
+  text-align: right;
+}
 #section-16 .content .caption {
   max-width: 390px;
   margin-left: auto;
+}
+#section-16 .content .intro {
+  max-width: 500px;
 }
 
 #section-17 .half-bg {
@@ -621,7 +642,20 @@ section .content {
   padding-right: 4rem;
 }
 #section-17 .left-col img {
-  max-width: 400px;
+  max-width: 500px;
+}
+
+#section-18 .intro {
+  font-size: 2.5em;
+  max-width: 580px;
+}
+
+#section-19 .intro {
+  max-width: 530px;
+}
+
+#section-20 .intro {
+  max-width: 600px;
 }
 
 .section-quote {
@@ -727,7 +761,7 @@ section .content {
 }
 #section-21 .content img {
   width: 100%;
-  max-width: 400px;
+  max-width: 480px;
   height: auto;
 }
 
@@ -772,6 +806,8 @@ section .content {
   }
   #section-23 .content .col {
     width: 100%;
+    height: auto;
+    margin-bottom: 4rem;
   }
   #section-23 .content .col:not(:last-child) {
     border: none;

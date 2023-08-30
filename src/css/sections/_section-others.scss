@@ -41,7 +41,7 @@
 
     img {
       width: 100%;
-      max-width: 400px;
+      max-width: 480px;
       height: auto;
     }
   }
@@ -93,6 +93,8 @@
 
       .col {
         width: 100%;
+        height: auto;
+        margin-bottom: 4rem;
         &:not(:last-child) {
           border: none;
         }

@@ -7,7 +7,7 @@
     bottom: 0;
     background-size: cover;
     background-position: center center;
-    z-index: -1;
+    // z-index: -1;
   }
 
   @include breakpoint($breakpoint-xs) {
@@ -42,7 +42,7 @@
     }
 
     .intro {
-      font-size: 1.8em;
+      font-size: 2em;
       line-height: 1.83;
     }
 
@@ -121,6 +121,12 @@
   }
 }
 
+#section-6 {
+  .intro {
+    max-width: 510px;
+  }
+}
+
 #section-11 {
   .content {
     img {
@@ -129,11 +135,37 @@
   }
 }
 
+#section-13 {
+  .intro {
+    max-width: 470px;
+  }
+}
+
+#section-14 {
+  .intro {
+    max-width: 510px;
+  }
+}
+
+#section-15 {
+  .intro {
+    max-width: 500px;
+  }
+}
+
 #section-16 {
   .content {
+    .left-col {
+      text-align: right;
+    }
+
     .caption {
       max-width: 390px;
       margin-left: auto;
+    }
+
+    .intro {
+      max-width: 500px;
     }
   }
 }
@@ -152,7 +184,26 @@
   .left-col {
     padding-right: 4rem;
     img {
-      max-width: 400px;
+      max-width: 500px;
     }
+  }
+}
+
+#section-18 {
+  .intro {
+    font-size: 2.5em;
+    max-width: 580px;
+  }
+}
+
+#section-19 {
+  .intro {
+    max-width: 530px;
+  }
+}
+
+#section-20 {
+  .intro {
+    max-width: 600px;
   }
 }

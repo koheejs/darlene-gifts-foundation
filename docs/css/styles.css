@@ -4,9 +4,9 @@
   --white-color: #ffffff;
   --black-color: #060606;
   --dark-color: #081925;
-  --header-top: 6rem;
+  --header-top: 4rem;
   --header-height: 10rem;
-  --header-nav-bottom: 94px;
+  --header-nav-bottom: 70px;
 }
 
 @media only screen and (max-width: 1200px) {

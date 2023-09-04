@@ -5,9 +5,9 @@
   --black-color: #{$black-color};
   --dark-color: #{$dark-color};
 
-  --header-top: 6rem;
+  --header-top: 4rem;
   --header-height: 10rem;
-  --header-nav-bottom: 94px;
+  --header-nav-bottom: 70px;
 }
 
 @include breakpoint($breakpoint-lg) {

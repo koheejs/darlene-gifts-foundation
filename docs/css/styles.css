@@ -532,9 +532,8 @@ section .content {
 }
 .content-default .content .left-col img,
 .content-default .content .right-col img {
-  height: calc(100% - 42px);
   max-width: 100%;
-  max-height: 700px;
+  max-height: calc(100% - 42px);
   object-fit: contain;
 }
 .content-default .content .title {

@@ -58,6 +58,17 @@
       }
     }
 
+    @include screenheight($breakpoint-md) {
+      row-gap: 3rem;
+
+      .item {
+        .number {
+          font-size: 3.8em;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
     @include breakpoint($breakpoint-sm) {
       grid-template-columns: repeat(2, 1fr);
       row-gap: 3rem;

@@ -32,9 +32,9 @@
     wrapper.classList.add('swiper-wrapper');
 
     swiper = new Swiper('main', {
-      direction: 'vertical',
-      mousewheel: true,
       freeMode: true,
+      mousewheel: true,
+      direction: 'vertical',
       breakpoints: {
         768: {
           direction: 'horizontal',
@@ -50,7 +50,20 @@
     wrapper.classList.remove('swiper-wrapper');
   }
 
+  function initMenuWithSwipper() {
+    const navigation = document.querySelector('header .nav-items');
+    const navigationItems = navigation.querySelectorAll('a');
+    navigationItems.forEach(function (item) {
+      item.addEventListener('click', function (event) {
+        const target = parseInt(this.dataset.target);
+        swiper && swiper.slideTo(target);
+        event.preventDefault();
+      });
+    });
+  }
+
   initSwiper();
+  initMenuWithSwipper();
 })();
 
 (function () {

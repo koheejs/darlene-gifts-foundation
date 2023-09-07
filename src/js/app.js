@@ -94,3 +94,16 @@
   window.addEventListener('resize', _.debounce(adjustSectionHeight, 50));
   window.dispatchEvent(new Event('resize'));
 })();
+
+(function video() {
+  const section8 = document.getElementById('section-8');
+  if (!section8) return;
+
+  const videoCover = section8.querySelector('.cover');
+  const iframe = section8.querySelector('.youtube-video');
+
+  videoCover.addEventListener('click', () => {
+    videoCover.classList.add('hidden');
+    iframe.classList.remove('hidden');
+  });
+})();

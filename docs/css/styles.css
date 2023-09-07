@@ -193,6 +193,10 @@ button {
   font-weight: bold;
 }
 
+.hidden {
+  display: none !important;
+}
+
 header {
   padding: 2rem 0;
   font-size: 2.4rem;
@@ -741,6 +745,17 @@ section .content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#section-8 .content .video-container {
+  width: 100%;
+  max-width: 1000px;
+}
+#section-8 .content .video-container .cover {
+  cursor: pointer;
+}
+#section-8 .content .video-container iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 #section-8 .content .intro {
   font-size: 8em;

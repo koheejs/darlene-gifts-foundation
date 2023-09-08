@@ -91,11 +91,6 @@
       margin-bottom: 4rem;
     }
 
-    .intro {
-      font-size: 1.5em;
-      line-height: 1.87;
-    }
-
     @include breakpoint($breakpoint-lg) {
       .title {
         font-size: 3.4em;

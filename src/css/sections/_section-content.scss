@@ -1,4 +1,12 @@
+$spacing: 8%;
+
 .content-default {
+  .container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+
   .half-bg {
     position: absolute;
     top: 0;
@@ -7,11 +15,8 @@
     bottom: 0;
     background-size: cover;
     background-position: center center;
-    // z-index: -1;
-  }
 
-  @include breakpoint($breakpoint-xs) {
-    .half-bg {
+    @include breakpoint($breakpoint-xs) {
       top: 50%;
       right: 0;
       left: 0;
@@ -21,22 +26,32 @@
 
   .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: 4rem;
     position: relative;
 
     .left-col,
     .right-col {
-      width: 50%;
+      width: (100 - 4 * $spacing) / 2;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      // background-color: rgba(255, 255, 255, 0.3);
+
       img {
         max-width: 100%;
         max-height: calc(100% - 42px);
         object-fit: contain;
+      }
+    }
+
+    &.equal-content {
+      justify-content: space-evenly;
+      .left-col,
+      .right-col {
+        width: (100 - 4 * $spacing) / 2;
       }
     }
 
@@ -127,13 +142,21 @@
 }
 
 #section-6 {
+  padding-left: $spacing / 3;
+
   .body-text-2 {
     max-width: 510px;
   }
 }
 
+#section-7 {
+  padding-left: $spacing;
+}
+
 #section-11 {
   .content {
+    padding-right: $spacing;
+
     img {
       max-height: 540px;
     }
@@ -141,6 +164,8 @@
 }
 
 #section-13 {
+  padding-left: $spacing;
+
   .intro {
     max-width: 470px;
   }
@@ -187,7 +212,7 @@
   }
 
   .left-col {
-    padding-right: 4rem;
+    padding-right: $spacing / 2;
     img {
       max-width: 500px;
     }
@@ -195,6 +220,8 @@
 }
 
 #section-18 {
+  padding-left: $spacing;
+
   .body-text-1 {
     max-width: 580px;
   }

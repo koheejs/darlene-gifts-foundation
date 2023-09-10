@@ -565,10 +565,6 @@ section .content {
 .content-default .content.equal-content {
   justify-content: space-evenly;
 }
-.content-default .content.equal-content .left-col,
-.content-default .content.equal-content .right-col {
-  width: 34%;
-}
 .content-default .content .title {
   font-family: "PTSerif";
   font-weight: bold;
@@ -588,12 +584,16 @@ section .content {
   .content-default .content {
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    padding: 0 8%;
+    gap: 6%;
+  }
+  .content-default .content.equal-content {
+    justify-content: center;
   }
   .content-default .content .left-col,
   .content-default .content .right-col {
     width: 100%;
-    max-width: 500px;
+    height: auto;
   }
   .content-default .content .left-col img,
   .content-default .content .right-col img {
@@ -646,6 +646,15 @@ section .content {
   padding-right: 4rem;
 }
 
+@media only screen and (max-width: 768px) {
+  #section-4 .left-col,
+  #section-4 .right-col {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 #section-6 {
   padding-left: 2.6666666667%;
 }
@@ -662,6 +671,14 @@ section .content {
 }
 #section-11 .content img {
   max-height: 540px;
+}
+@media only screen and (max-width: 768px) {
+  #section-11 .left-col,
+  #section-11 .right-col {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 #section-13 {
@@ -685,6 +702,16 @@ section .content {
 #section-16 .content .caption {
   max-width: 390px;
   margin-left: auto;
+  text-align: left;
+}
+@media only screen and (max-width: 768px) {
+  #section-16 .content .left-col {
+    text-align: left;
+  }
+  #section-16 .content .left-col .caption {
+    text-align: left;
+    margin-left: 0;
+  }
 }
 #section-16 .content .body-text-2 {
   max-width: 500px;

@@ -302,6 +302,41 @@ header .donate-cta {
   line-height: 144px;
   font-weight: bold;
 }
+@media only screen and (max-width: 768px) {
+  header nav.active {
+    max-height: min(300px, 80%);
+  }
+  header .nav-items {
+    line-height: 1.5;
+    font-size: 2.4rem;
+    right: 180px;
+    bottom: 40px;
+  }
+  header .donate-cta {
+    width: 100px;
+    height: 100px;
+    font-size: 1.8rem;
+    line-height: 100px;
+    right: 40px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  header nav.active {
+    max-height: min(300px, 80%);
+  }
+  header .nav-items {
+    font-size: 2.2rem;
+    right: 120px;
+    bottom: 40px;
+  }
+  header .donate-cta {
+    width: 80px;
+    height: 80px;
+    font-size: 1.2rem;
+    line-height: 80px;
+    right: 20px;
+  }
+}
 
 body > main {
   height: 100vh;
@@ -536,10 +571,8 @@ section .content {
 }
 @media only screen and (max-width: 576px) {
   .content-default .half-bg {
-    top: 50%;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    position: static;
+    padding-top: 80%;
   }
 }
 .content-default .content {
@@ -608,9 +641,8 @@ section .content {
   .content-default .content {
     display: block;
   }
-  .content-default .content .left-col,
-  .content-default .content .right-col {
-    margin: 2rem 0;
+  .content-default .content .left-col {
+    margin-bottom: 6rem;
   }
 }
 
@@ -772,6 +804,9 @@ section .content {
   }
 }
 @media only screen and (max-width: 576px) {
+  .section-quote .content {
+    padding: 8rem 0;
+  }
   .section-quote .content .intro {
     font-size: 4em;
   }
@@ -921,6 +956,11 @@ section .content {
 @media only screen and (max-height: 576px) {
   #section-last {
     --v-spacing: 4rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #section-last {
+    padding-bottom: 8rem;
   }
 }
 #section-last .content {

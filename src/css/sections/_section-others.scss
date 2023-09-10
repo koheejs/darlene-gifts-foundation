@@ -123,6 +123,10 @@
     --v-spacing: 4rem;
   }
 
+  @include breakpoint($breakpoint-xs) {
+    padding-bottom: 8rem;
+  }
+
   .content {
     display: flex;
     flex-direction: column;

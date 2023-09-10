@@ -24,6 +24,11 @@
 
 (function scrollEffect() {
   let swiper;
+  const Class = {
+    SWIPER: 'swiper',
+    WRAPPER: 'swiper-wrapper',
+  };
+
   const mainElement = document.querySelector('main');
   const wrapper = mainElement.firstElementChild;
 
@@ -43,9 +48,9 @@
     });
   }
 
-  // TODO: destroy swipper in mobile mode
   function destroySwiper() {
     if (swiper) swiper.destroy();
+    swiper = null;
     mainElement.classList.remove('swiper');
     wrapper.classList.remove('swiper-wrapper');
   }
@@ -56,13 +61,32 @@
     navigationItems.forEach(function (item) {
       item.addEventListener('click', function (event) {
         const target = parseInt(this.dataset.target);
-        swiper && swiper.slideTo(target);
-        event.preventDefault();
+        if (swiper) {
+          swiper && swiper.slideTo(target);
+          event.preventDefault();
+        }
       });
     });
   }
 
-  initSwiper();
+  function swipperHandler() {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    if (windowWidth < 768 || windowHeight < 400) {
+      destroySwiper();
+      mainElement.classList.remove(Class.SWIPER);
+      wrapper.classList.remove(Class.WRAPPER);
+    } else {
+      mainElement.classList.add(Class.SWIPER);
+      wrapper.classList.add(Class.WRAPPER);
+      initSwiper();
+    }
+  }
+
+  window.addEventListener('resize', _.debounce(swipperHandler, 50));
+  window.dispatchEvent(new Event('resize'));
+
   initMenuWithSwipper();
 })();
 

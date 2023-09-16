@@ -1,10 +1,17 @@
-#fund-raising {
+#fund-raising,
+#fund-raising-2 {
   background-color: var(--black-color);
+
+  .container {
+    max-width: 1115px;
+  }
 
   .content {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-top: 0;
+    height: 100%;
 
     .intro {
       font-size: 4em;
@@ -28,24 +35,31 @@
         font-weight: bold;
         font-size: 10em;
         line-height: 0.65;
+        color: var(--secondary-color);
 
         .unit {
           font-family: Jarkata;
           font-weight: normal;
           font-size: 2rem;
+          color: var(--white-color);
         }
       }
     }
 
     .bottom {
-      text-align: right;
+      text-align: center;
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
-      justify-content: flex-end;
+      align-items: center;
+      justify-content: center;
 
       .intro {
         margin-bottom: 4rem;
+
+        strong {
+          color: var(--secondary-color);
+        }
+
         @include breakpoint($breakpoint-lg) {
           margin-bottom: 2rem;
         }
@@ -53,7 +67,9 @@
 
       .font-pt {
         font-size: 2em;
-        max-width: 678px;
+        max-width: 685px;
+        font-style: normal;
+        font-weight: 400;
       }
     }
 

@@ -7,7 +7,7 @@
 
   --header-top: 4rem;
   --header-height: 10rem;
-  --header-nav-bottom: 70px;
+  --header-nav-bottom: 40px;
 }
 
 @include breakpoint($breakpoint-lg) {
@@ -71,6 +71,13 @@
   src: url(../assets/fonts/JosefinSans-Bold.ttf) format('truetype');
   font-style: normal;
   font-weight: bold;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: url(../assets/fonts/PTSerif-Regular.ttf) format('truetype');
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
@@ -256,8 +263,8 @@ header {
   }
 
   .menu-button {
-    width: 150px;
-    height: 63px;
+    width: 120px;
+    height: 50px;
     border-radius: 40px;
     font-weight: 800;
     font-size: 15px;

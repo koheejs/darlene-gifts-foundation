@@ -6,7 +6,7 @@
   --dark-color: #081925;
   --header-top: 4rem;
   --header-height: 10rem;
-  --header-nav-bottom: 70px;
+  --header-nav-bottom: 40px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -61,6 +61,12 @@
   src: url(../assets/fonts/JosefinSans-Bold.ttf) format("truetype");
   font-style: normal;
   font-weight: bold;
+}
+@font-face {
+  font-family: "PTSerif";
+  src: url(../assets/fonts/PTSerif-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 @font-face {
   font-family: "PTSerif";
@@ -240,8 +246,8 @@ header .logo {
   }
 }
 header .menu-button {
-  width: 150px;
-  height: 63px;
+  width: 120px;
+  height: 50px;
   border-radius: 40px;
   font-weight: 800;
   font-size: 15px;
@@ -375,8 +381,8 @@ section .content {
 }
 #hero-section .content .description {
   font-size: 2em;
-  line-height: 1.9;
-  max-width: 88rem;
+  line-height: 1.4;
+  max-width: 45rem;
 }
 @media only screen and (max-width: 1200px) {
   #hero-section .content {
@@ -397,78 +403,109 @@ section .content {
   }
 }
 
-#fund-raising {
+#fund-raising,
+#fund-raising-2 {
   background-color: var(--black-color);
 }
-#fund-raising .content {
+#fund-raising .container,
+#fund-raising-2 .container {
+  max-width: 1115px;
+}
+#fund-raising .content,
+#fund-raising-2 .content {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-top: 0;
+  height: 100%;
 }
-#fund-raising .content .intro {
+#fund-raising .content .intro,
+#fund-raising-2 .content .intro {
   font-size: 4em;
   line-height: 1.16;
   margin-bottom: 4rem;
 }
-#fund-raising .content .description {
+#fund-raising .content .description,
+#fund-raising-2 .content .description {
   font-size: 2em;
   line-height: 1.9;
   max-width: 88rem;
 }
-#fund-raising .content .top .intro {
+#fund-raising .content .top .intro,
+#fund-raising-2 .content .top .intro {
   max-width: 950px;
 }
-#fund-raising .content .top .amount {
+#fund-raising .content .top .amount,
+#fund-raising-2 .content .top .amount {
   font-family: PTSerif;
   font-weight: bold;
   font-size: 10em;
   line-height: 0.65;
+  color: var(--secondary-color);
 }
-#fund-raising .content .top .amount .unit {
+#fund-raising .content .top .amount .unit,
+#fund-raising-2 .content .top .amount .unit {
   font-family: Jarkata;
   font-weight: normal;
   font-size: 2rem;
+  color: var(--white-color);
 }
-#fund-raising .content .bottom {
-  text-align: right;
+#fund-raising .content .bottom,
+#fund-raising-2 .content .bottom {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
 }
-#fund-raising .content .bottom .intro {
+#fund-raising .content .bottom .intro,
+#fund-raising-2 .content .bottom .intro {
   margin-bottom: 4rem;
 }
+#fund-raising .content .bottom .intro strong,
+#fund-raising-2 .content .bottom .intro strong {
+  color: var(--secondary-color);
+}
 @media only screen and (max-width: 1200px) {
-  #fund-raising .content .bottom .intro {
+  #fund-raising .content .bottom .intro,
+  #fund-raising-2 .content .bottom .intro {
     margin-bottom: 2rem;
   }
 }
-#fund-raising .content .bottom .font-pt {
+#fund-raising .content .bottom .font-pt,
+#fund-raising-2 .content .bottom .font-pt {
   font-size: 2em;
-  max-width: 678px;
+  max-width: 685px;
+  font-style: normal;
+  font-weight: 400;
 }
 @media only screen and (max-width: 1200px) {
-  #fund-raising .content {
+  #fund-raising .content,
+  #fund-raising-2 .content {
     font-size: 0.6rem;
   }
-  #fund-raising .content .top .amount {
+  #fund-raising .content .top .amount,
+  #fund-raising-2 .content .top .amount {
     font-size: 8em;
   }
-  #fund-raising .content .bottom .font-pt {
+  #fund-raising .content .bottom .font-pt,
+  #fund-raising-2 .content .bottom .font-pt {
     font-size: 2.6em;
   }
 }
 @media only screen and (max-width: 768px) {
-  #fund-raising .content .top .amount {
+  #fund-raising .content .top .amount,
+  #fund-raising-2 .content .top .amount {
     font-size: 7em;
   }
 }
 @media only screen and (max-height: 576px) {
-  #fund-raising .content {
+  #fund-raising .content,
+  #fund-raising-2 .content {
     display: block;
   }
-  #fund-raising .content .top {
+  #fund-raising .content .top,
+  #fund-raising-2 .content .top {
     margin-bottom: 2rem;
   }
 }

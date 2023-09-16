@@ -7,16 +7,19 @@ $spacing: 8%;
     width: 100%;
     max-width: none;
     padding: 0;
+    position: relative;
+    z-index: 1;
   }
 
   .half-bg {
-    position: absolute;
     top: 0;
     right: 0;
     left: 50%;
     bottom: 0;
+    z-index: 0;
+    position: absolute;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
 
     @include breakpoint($breakpoint-xs) {
       position: static;
@@ -99,6 +102,17 @@ $spacing: 8%;
       .left-col {
         margin-bottom: 6rem;
       }
+    }
+  }
+}
+
+#section-4 {
+  .title {
+    font-size: 6rem;
+    line-height: 0.85;
+
+    .font-pt {
+      font-weight: 400;
     }
   }
 }

@@ -367,6 +367,7 @@ section .content {
 #hero-section {
   background-image: url("../assets/images/hero-bg.png");
   background-size: cover;
+  background-position: center;
 }
 #hero-section .content {
   font-size: 1rem;
@@ -513,6 +514,7 @@ section .content {
 #achievements {
   background-image: url("../assets/images/section3-bg.png");
   background-size: cover;
+  background-position: center;
 }
 #achievements .content {
   display: flex;
@@ -596,15 +598,18 @@ section .content {
   width: 100%;
   max-width: none;
   padding: 0;
+  position: relative;
+  z-index: 1;
 }
 .content-default .half-bg {
-  position: absolute;
   top: 0;
   right: 0;
   left: 50%;
   bottom: 0;
+  z-index: 0;
+  position: absolute;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
 }
 @media only screen and (max-width: 576px) {
   .content-default .half-bg {
@@ -681,6 +686,14 @@ section .content {
   .content-default .content .left-col {
     margin-bottom: 6rem;
   }
+}
+
+#section-4 .title {
+  font-size: 6rem;
+  line-height: 0.85;
+}
+#section-4 .title .font-pt {
+  font-weight: 400;
 }
 
 #section-6 {
@@ -879,6 +892,15 @@ section .content {
 }
 #section-24 .content .intro {
   line-height: 1.125;
+}
+
+#section-4-2 .content {
+  margin-top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
 }
 
 #section-8 {

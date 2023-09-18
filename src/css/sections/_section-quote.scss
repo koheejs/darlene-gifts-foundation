@@ -4,8 +4,33 @@
 
   .content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .badge {
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      width: 10rem;
+      height: 10rem;
+      line-height: 10rem;
+      font-size: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: -0.7px;
+      font-weight: 700;
+      align-self: flex-start;
+      margin-bottom: 2rem;
+      margin-top: -7.5rem;
+
+      @include breakpoint($breakpoint-sm) {
+        margin-top: 0;
+        font-size: 12px;
+        width: 8rem;
+        height: 8rem;
+        line-height: 8rem;
+      }
+    }
 
     .intro {
       font-size: 8em;
@@ -39,19 +64,25 @@
 #section-12 {
   background-image: url('../assets/images/section12-bg.png');
   .content {
-    .intro {
-      max-width: 1110px;
-    }
+    max-width: 1110px;
   }
 }
 
 #section-22 {
   background-image: url('../assets/images/section22-bg.png');
+
+  .badge {
+    display: flex;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+
   .content {
     .intro {
       font-size: 6em;
       line-height: 1.183;
-      max-width: 1250px;
     }
 
     @include breakpoint($breakpoint-sm) {

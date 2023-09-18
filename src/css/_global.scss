@@ -229,6 +229,10 @@ button {
   font-size: 2rem;
   line-height: 1.76;
   letter-spacing: 0.02em;
+
+  @include breakpoint($breakpoint-sm) {
+    font-size: 1.6rem;
+  }
 }
 
 .hidden {

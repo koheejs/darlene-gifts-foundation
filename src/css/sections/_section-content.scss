@@ -48,6 +48,19 @@ $spacing: 8%;
         max-height: calc(100% - 42px);
         object-fit: contain;
       }
+
+      .badge {
+        img {
+          max-width: none;
+          max-height: none;
+          @include square(10rem);
+        }
+
+        @include breakpoint($breakpoint-sm) {
+          transform: scale(0.7);
+          transform-origin: 0 center;
+        }
+      }
     }
 
     &.equal-content {
@@ -111,6 +124,10 @@ $spacing: 8%;
     font-size: 6rem;
     line-height: 0.85;
 
+    @include breakpoint($breakpoint-sm) {
+      font-size: 3.6rem;
+    }
+
     .font-pt {
       font-weight: 400;
     }
@@ -119,6 +136,15 @@ $spacing: 8%;
 
 #section-6 {
   background-color: var(--black-color);
+  padding-left: math.div($spacing, 3);
+
+  .body-text-2 {
+    max-width: 510px;
+  }
+
+  .title {
+    font-family: 'Jarkata';
+  }
 
   .half-bg {
     background-image: url('../assets/images/section6-bg.png');
@@ -166,16 +192,19 @@ $spacing: 8%;
   }
 }
 
-#section-6 {
-  padding-left: math.div($spacing, 3);
-
-  .body-text-2 {
-    max-width: 510px;
-  }
-}
-
 #section-7 {
   padding-left: $spacing;
+}
+
+#section-9 {
+  .left-col,
+  .right-col {
+    width: math.div((100 - 2 * $spacing), 2);
+
+    @include breakpoint($breakpoint-sm) {
+      width: 100%;
+    }
+  }
 }
 
 #section-11 {
@@ -206,12 +235,78 @@ $spacing: 8%;
 }
 
 #section-14 {
+  .content {
+    justify-content: space-between;
+  }
+
+  .right-col {
+    width: 44%;
+    padding-right: 6%;
+  }
+
+  @include breakpoint($breakpoint-sm) {
+    .right-col {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  .title {
+    line-height: 0.91;
+
+    .font-pt {
+      font-weight: 400;
+    }
+  }
+
   .body-text-2 {
     max-width: 510px;
+  }
+
+  .half-bg {
+    left: 0;
+    right: 50%;
   }
 }
 
 #section-15 {
+  .content {
+    justify-content: space-between;
+
+    .badge {
+      img {
+        @include square(6rem);
+      }
+    }
+
+    .left-col {
+      width: 100%;
+      gap: 7rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      @include breakpoint($breakpoint-sm) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .box:first-child {
+      flex: 1.38;
+    }
+
+    .box:last-child {
+      flex: 1.7;
+      padding-right: 4rem;
+    }
+
+    .box:nth-child(2) {
+      flex: 1;
+      flex-shrink: 1;
+    }
+  }
+
   .body-text-3 {
     max-width: 500px;
   }
@@ -223,10 +318,19 @@ $spacing: 8%;
       text-align: right;
     }
 
+    .badge {
+      img {
+        @include square(7rem);
+      }
+    }
+
     .caption {
       max-width: 390px;
       margin-left: auto;
-      text-align: left;
+    }
+
+    .right-col {
+      width: 42%;
     }
 
     @include breakpoint($breakpoint-sm) {
@@ -236,6 +340,10 @@ $spacing: 8%;
           text-align: left;
           margin-left: 0;
         }
+      }
+
+      .right-col {
+        width: 100%;
       }
     }
 
@@ -267,12 +375,49 @@ $spacing: 8%;
 #section-18 {
   padding-left: $spacing;
 
+  @include breakpoint($breakpoint-sm) {
+    padding-left: 0;
+  }
+
+  .left-col {
+    width: 43%;
+
+    @include breakpoint($breakpoint-sm) {
+      width: 100%;
+    }
+  }
+
+  .subtitle {
+    color: var(--secondary-color);
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .title {
+    font-family: 'Jarkata';
+  }
+
   .body-text-1 {
     max-width: 580px;
   }
 }
 
 #section-19 {
+  .title {
+    font-size: 3rem;
+
+    .normal {
+      font-weight: normal;
+    }
+  }
+
+  .left-col {
+    width: 40%;
+    @include breakpoint($breakpoint-sm) {
+      width: 100%;
+    }
+  }
+
   .body-text-2 {
     max-width: 530px;
   }
@@ -281,5 +426,37 @@ $spacing: 8%;
 #section-20 {
   .body-text-2 {
     max-width: 600px;
+  }
+}
+
+#section-21-2 {
+  .content {
+    justify-content: space-between;
+
+    .left-col {
+      width: 100%;
+      gap: 7rem;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: calc($spacing / 2);
+
+      @include breakpoint($breakpoint-sm) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .box:first-child {
+      flex: 1.9;
+    }
+
+    .box:last-child {
+      flex: 1;
+    }
+
+    .box:nth-child(2) {
+      flex: 1;
+    }
   }
 }

@@ -216,6 +216,11 @@ button {
   line-height: 1.76;
   letter-spacing: 0.02em;
 }
+@media only screen and (max-width: 768px) {
+  .body-text-3 {
+    font-size: 1.6rem;
+  }
+}
 
 .hidden {
   display: none !important;
@@ -637,6 +642,20 @@ section .content {
   max-height: calc(100% - 42px);
   object-fit: contain;
 }
+.content-default .content .left-col .badge img,
+.content-default .content .right-col .badge img {
+  max-width: none;
+  max-height: none;
+  width: 10rem;
+  height: 10rem;
+}
+@media only screen and (max-width: 768px) {
+  .content-default .content .left-col .badge,
+  .content-default .content .right-col .badge {
+    transform: scale(0.7);
+    transform-origin: 0 center;
+  }
+}
 .content-default .content.equal-content {
   justify-content: space-evenly;
 }
@@ -692,12 +711,24 @@ section .content {
   font-size: 6rem;
   line-height: 0.85;
 }
+@media only screen and (max-width: 768px) {
+  #section-4 .title {
+    font-size: 3.6rem;
+  }
+}
 #section-4 .title .font-pt {
   font-weight: 400;
 }
 
 #section-6 {
   background-color: var(--black-color);
+  padding-left: 2.6666666667%;
+}
+#section-6 .body-text-2 {
+  max-width: 510px;
+}
+#section-6 .title {
+  font-family: "Jarkata";
 }
 #section-6 .half-bg {
   background-image: url("../assets/images/section6-bg.png");
@@ -737,15 +768,19 @@ section .content {
   }
 }
 
-#section-6 {
-  padding-left: 2.6666666667%;
-}
-#section-6 .body-text-2 {
-  max-width: 510px;
-}
-
 #section-7 {
   padding-left: 8%;
+}
+
+#section-9 .left-col,
+#section-9 .right-col {
+  width: 42%;
+}
+@media only screen and (max-width: 768px) {
+  #section-9 .left-col,
+  #section-9 .right-col {
+    width: 100%;
+  }
 }
 
 #section-11 .content {
@@ -770,10 +805,64 @@ section .content {
   max-width: 470px;
 }
 
+#section-14 .content {
+  justify-content: space-between;
+}
+#section-14 .right-col {
+  width: 44%;
+  padding-right: 6%;
+}
+@media only screen and (max-width: 768px) {
+  #section-14 .right-col {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+#section-14 .title {
+  line-height: 0.91;
+}
+#section-14 .title .font-pt {
+  font-weight: 400;
+}
 #section-14 .body-text-2 {
   max-width: 510px;
 }
+#section-14 .half-bg {
+  left: 0;
+  right: 50%;
+}
 
+#section-15 .content {
+  justify-content: space-between;
+}
+#section-15 .content .badge img {
+  width: 6rem;
+  height: 6rem;
+}
+#section-15 .content .left-col {
+  width: 100%;
+  gap: 7rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  #section-15 .content .left-col {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+#section-15 .content .box:first-child {
+  flex: 1.38;
+}
+#section-15 .content .box:last-child {
+  flex: 1.7;
+  padding-right: 4rem;
+}
+#section-15 .content .box:nth-child(2) {
+  flex: 1;
+  flex-shrink: 1;
+}
 #section-15 .body-text-3 {
   max-width: 500px;
 }
@@ -781,10 +870,16 @@ section .content {
 #section-16 .content .left-col {
   text-align: right;
 }
+#section-16 .content .badge img {
+  width: 7rem;
+  height: 7rem;
+}
 #section-16 .content .caption {
   max-width: 390px;
   margin-left: auto;
-  text-align: left;
+}
+#section-16 .content .right-col {
+  width: 42%;
 }
 @media only screen and (max-width: 768px) {
   #section-16 .content .left-col {
@@ -793,6 +888,9 @@ section .content {
   #section-16 .content .left-col .caption {
     text-align: left;
     margin-left: 0;
+  }
+  #section-16 .content .right-col {
+    width: 100%;
   }
 }
 #section-16 .content .body-text-2 {
@@ -817,10 +915,45 @@ section .content {
 #section-18 {
   padding-left: 8%;
 }
+@media only screen and (max-width: 768px) {
+  #section-18 {
+    padding-left: 0;
+  }
+}
+#section-18 .left-col {
+  width: 43%;
+}
+@media only screen and (max-width: 768px) {
+  #section-18 .left-col {
+    width: 100%;
+  }
+}
+#section-18 .subtitle {
+  color: var(--secondary-color);
+  font-size: 3rem;
+  font-weight: 700;
+}
+#section-18 .title {
+  font-family: "Jarkata";
+}
 #section-18 .body-text-1 {
   max-width: 580px;
 }
 
+#section-19 .title {
+  font-size: 3rem;
+}
+#section-19 .title .normal {
+  font-weight: normal;
+}
+#section-19 .left-col {
+  width: 40%;
+}
+@media only screen and (max-width: 768px) {
+  #section-19 .left-col {
+    width: 100%;
+  }
+}
 #section-19 .body-text-2 {
   max-width: 530px;
 }
@@ -829,14 +962,66 @@ section .content {
   max-width: 600px;
 }
 
+#section-21-2 .content {
+  justify-content: space-between;
+}
+#section-21-2 .content .left-col {
+  width: 100%;
+  gap: 7rem;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4%;
+}
+@media only screen and (max-width: 768px) {
+  #section-21-2 .content .left-col {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+#section-21-2 .content .box:first-child {
+  flex: 1.9;
+}
+#section-21-2 .content .box:last-child {
+  flex: 1;
+}
+#section-21-2 .content .box:nth-child(2) {
+  flex: 1;
+}
+
 .section-quote {
   background-size: cover;
   background-position: center;
 }
 .section-quote .content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.section-quote .content .badge {
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  width: 10rem;
+  height: 10rem;
+  line-height: 10rem;
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.7px;
+  font-weight: 700;
+  align-self: flex-start;
+  margin-bottom: 2rem;
+  margin-top: -7.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .section-quote .content .badge {
+    margin-top: 0;
+    font-size: 12px;
+    width: 8rem;
+    height: 8rem;
+    line-height: 8rem;
+  }
 }
 .section-quote .content .intro {
   font-size: 8em;
@@ -869,17 +1054,23 @@ section .content {
 #section-12 {
   background-image: url("../assets/images/section12-bg.png");
 }
-#section-12 .content .intro {
+#section-12 .content {
   max-width: 1110px;
 }
 
 #section-22 {
   background-image: url("../assets/images/section22-bg.png");
 }
+#section-22 .badge {
+  display: flex;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
 #section-22 .content .intro {
   font-size: 6em;
   line-height: 1.183;
-  max-width: 1250px;
 }
 @media only screen and (max-width: 768px) {
   #section-22 .content .intro {
@@ -901,6 +1092,11 @@ section .content {
   justify-content: center;
   align-items: center;
   gap: 1.6rem;
+}
+@media only screen and (max-width: 768px) {
+  #section-4-2 .content {
+    flex-direction: column;
+  }
 }
 
 #section-8 {

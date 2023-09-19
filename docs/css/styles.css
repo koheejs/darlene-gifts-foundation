@@ -356,11 +356,15 @@ body > main {
 section .container {
   height: 100%;
 }
+@media only screen and (max-width: 576px) {
+  section {
+    padding: 4rem 0;
+  }
+}
 section .content {
   font-size: 1rem;
   padding: 2rem 0;
-  margin-top: calc(var(--header-top) + var(--header-height));
-  height: calc(100% - var(--header-nav-bottom) - var(--header-top) - var(--header-height));
+  height: 100%;
   overflow-y: auto;
 }
 @media only screen and (max-width: 1200px) {
@@ -373,6 +377,11 @@ section .content {
   background-image: url("../assets/images/hero-bg.png");
   background-size: cover;
   background-position: center;
+}
+@media only screen and (max-width: 576px) {
+  #hero-section {
+    padding: 8rem 0 4rem;
+  }
 }
 #hero-section .content {
   font-size: 1rem;
@@ -619,6 +628,7 @@ section .content {
 @media only screen and (max-width: 576px) {
   .content-default .half-bg {
     position: static;
+    margin: 4rem 0;
     padding-top: 80%;
   }
 }
@@ -772,6 +782,9 @@ section .content {
   padding-left: 8%;
 }
 
+#section-9 .content {
+  justify-content: space-evenly;
+}
 #section-9 .left-col,
 #section-9 .right-col {
   width: 42%;
@@ -783,11 +796,17 @@ section .content {
   }
 }
 
+#section-10 .half-bg {
+  left: 0;
+  right: 50%;
+}
+
 #section-11 .content {
   padding-right: 8%;
+  justify-content: space-evenly;
 }
 #section-11 .content img {
-  max-height: 540px;
+  max-height: 460px;
 }
 @media only screen and (max-width: 768px) {
   #section-11 .left-col,
@@ -852,6 +871,11 @@ section .content {
     align-items: flex-start;
   }
 }
+@media only screen and (max-width: 576px) {
+  #section-15 .content .left-col {
+    gap: 2rem;
+  }
+}
 #section-15 .content .box:first-child {
   flex: 1.38;
 }
@@ -862,6 +886,14 @@ section .content {
 #section-15 .content .box:nth-child(2) {
   flex: 1;
   flex-shrink: 1;
+}
+#section-15 .content .box:nth-child(2) img {
+  margin-top: 30%;
+}
+@media only screen and (max-width: 576px) {
+  #section-15 .content .box:nth-child(2) img {
+    margin-top: 0;
+  }
 }
 #section-15 .body-text-3 {
   max-width: 500px;

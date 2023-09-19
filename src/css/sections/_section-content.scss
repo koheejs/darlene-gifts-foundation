@@ -23,6 +23,7 @@ $spacing: 8%;
 
     @include breakpoint($breakpoint-xs) {
       position: static;
+      margin: 4rem 0;
       padding-top: 80%;
     }
   }
@@ -197,6 +198,10 @@ $spacing: 8%;
 }
 
 #section-9 {
+  .content {
+    justify-content: space-evenly;
+  }
+
   .left-col,
   .right-col {
     width: math.div((100 - 2 * $spacing), 2);
@@ -207,12 +212,20 @@ $spacing: 8%;
   }
 }
 
+#section-10 {
+  .half-bg {
+    left: 0;
+    right: 50%;
+  }
+}
+
 #section-11 {
   .content {
     padding-right: $spacing;
+    justify-content: space-evenly;
 
     img {
-      max-height: 540px;
+      max-height: 460px;
     }
   }
 
@@ -290,6 +303,10 @@ $spacing: 8%;
         flex-direction: column;
         align-items: flex-start;
       }
+
+      @include breakpoint($breakpoint-xs) {
+        gap: 2rem;
+      }
     }
 
     .box:first-child {
@@ -304,6 +321,12 @@ $spacing: 8%;
     .box:nth-child(2) {
       flex: 1;
       flex-shrink: 1;
+      img {
+        margin-top: 30%;
+        @include breakpoint($breakpoint-xs) {
+          margin-top: 0;
+        }
+      }
     }
   }
 

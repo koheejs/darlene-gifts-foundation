@@ -3,6 +3,10 @@
   background-size: cover;
   background-position: center;
 
+  @include breakpoint($breakpoint-xs) {
+    padding: 8rem 0 4rem;
+  }
+
   .content {
     font-size: 1rem;
     display: flex;

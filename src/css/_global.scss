@@ -318,6 +318,15 @@ header {
     text-align: right;
     font-size: 3.5rem;
     line-height: 1.314;
+
+    a {
+      padding: 4px 1rem;
+      display: block;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
   }
 
   .donate-cta {
@@ -331,6 +340,9 @@ header {
     font-size: 2.5rem;
     line-height: 144px;
     font-weight: bold;
+    &:hover {
+      background-color: var(--secondary-color);
+    }
   }
 
   @include breakpoint($breakpoint-sm) {

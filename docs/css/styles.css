@@ -300,6 +300,13 @@ header .nav-items {
   font-size: 3.5rem;
   line-height: 1.314;
 }
+header .nav-items a {
+  padding: 4px 1rem;
+  display: block;
+}
+header .nav-items a:hover {
+  color: var(--secondary-color);
+}
 header .donate-cta {
   position: absolute;
   width: 144px;
@@ -312,6 +319,9 @@ header .donate-cta {
   font-size: 2.5rem;
   line-height: 144px;
   font-weight: bold;
+}
+header .donate-cta:hover {
+  background-color: var(--secondary-color);
 }
 @media only screen and (max-width: 768px) {
   header nav.active {

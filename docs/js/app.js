@@ -7,17 +7,25 @@
  */
 
 (function headerNavigator() {
+  let isActive = false;
   const classActive = 'active';
   const menuButton = document.querySelector('.menu-button');
   const navigation = document.querySelector('.site-nav');
-  menuButton.addEventListener('click', function () {
+
+  function toggleMenu() {
     navigation.classList.toggle(classActive);
+    isActive = !isActive;
+    menuButton.textContent = isActive ? 'CLOSE' : 'MENU';
+  }
+
+  menuButton.addEventListener('click', function () {
+    toggleMenu();
   });
 
   const navigationItems = navigation.querySelectorAll('a');
   navigationItems.forEach(function (item) {
     item.addEventListener('click', function () {
-      navigation.classList.toggle(classActive);
+      toggleMenu();
     });
   });
 })();

@@ -806,7 +806,7 @@ section .content {
 }
 #section-9 .left-col,
 #section-9 .right-col {
-  width: 42%;
+  width: 35.6%;
 }
 @media only screen and (max-width: 768px) {
   #section-9 .left-col,
@@ -914,7 +914,7 @@ section .content {
     margin-top: 0;
   }
 }
-#section-15 .body-text-3 {
+#section-15 .body-text-2 {
   max-width: 500px;
 }
 
@@ -966,7 +966,7 @@ section .content {
 #section-18 {
   padding-left: 8%;
 }
-#section-18 .body-text-3 {
+#section-18 .body-text-2 {
   max-width: 560px;
 }
 @media only screen and (max-width: 768px) {

@@ -206,7 +206,7 @@ $spacing: 8%;
 
   .left-col,
   .right-col {
-    width: math.div((100 - 2 * $spacing), 2);
+    width: math.div((100 - 3.6 * $spacing), 2);
 
     @include breakpoint($breakpoint-sm) {
       width: 100%;
@@ -332,7 +332,7 @@ $spacing: 8%;
     }
   }
 
-  .body-text-3 {
+  .body-text-2 {
     max-width: 500px;
   }
 }
@@ -400,7 +400,7 @@ $spacing: 8%;
 #section-18 {
   padding-left: $spacing;
 
-  .body-text-3 {
+  .body-text-2 {
     max-width: 560px;
   }
 

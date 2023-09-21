@@ -476,6 +476,7 @@ section .content {
 #fund-raising .content .bottom .intro,
 #fund-raising-2 .content .bottom .intro {
   margin-bottom: 4rem;
+  font-size: 6rem;
 }
 #fund-raising .content .bottom .intro strong,
 #fund-raising-2 .content .bottom .intro strong {
@@ -489,8 +490,8 @@ section .content {
 }
 #fund-raising .content .bottom .font-pt,
 #fund-raising-2 .content .bottom .font-pt {
-  font-size: 2em;
-  max-width: 685px;
+  font-size: 3em;
+  max-width: 1030px;
   font-style: normal;
   font-weight: 400;
 }
@@ -522,6 +523,22 @@ section .content {
   #fund-raising .content .top,
   #fund-raising-2 .content .top {
     margin-bottom: 2rem;
+  }
+}
+
+#fund-raising-2 .container {
+  max-width: none;
+}
+@media only screen and (max-width: 1200px) {
+  #fund-raising-2 {
+    font-size: 0.6rem;
+  }
+  #fund-raising-2 .content .bottom .intro {
+    font-size: 4rem;
+  }
+  #fund-raising-2 .content .bottom .font-pt {
+    font-size: 3.6em;
+    max-width: 750px;
   }
 }
 
@@ -718,8 +735,10 @@ section .content {
 }
 
 #section-4 .title {
-  font-size: 6rem;
+  font-size: 8rem;
   line-height: 0.85;
+  font-family: "Jarkata";
+  text-align: center;
 }
 @media only screen and (max-width: 768px) {
   #section-4 .title {
@@ -947,6 +966,9 @@ section .content {
 #section-18 {
   padding-left: 8%;
 }
+#section-18 .body-text-3 {
+  max-width: 560px;
+}
 @media only screen and (max-width: 768px) {
   #section-18 {
     padding-left: 0;
@@ -1030,6 +1052,7 @@ section .content {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 .section-quote .content .badge {
   border-radius: 50%;
@@ -1191,7 +1214,7 @@ section .content {
   display: flex;
   margin-left: -2rem;
   margin-right: -2rem;
-  padding-bottom: 8rem;
+  padding-bottom: 6rem;
 }
 #section-23 .content .col {
   width: 33.3333333333%;

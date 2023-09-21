@@ -55,6 +55,7 @@
 
       .intro {
         margin-bottom: 4rem;
+        font-size: 6rem;
 
         strong {
           color: var(--secondary-color);
@@ -66,8 +67,8 @@
       }
 
       .font-pt {
-        font-size: 2em;
-        max-width: 685px;
+        font-size: 3em;
+        max-width: 1030px;
         font-style: normal;
         font-weight: 400;
       }
@@ -99,6 +100,28 @@
       display: block;
       .top {
         margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+#fund-raising-2 {
+  .container {
+    max-width: none;
+  }
+
+  @include breakpoint($breakpoint-lg) {
+    font-size: 0.6rem;
+
+    .content {
+      .bottom {
+        .intro {
+          font-size: 4rem;
+        }
+        .font-pt {
+          font-size: 3.6em;
+          max-width: 750px;
+        }
       }
     }
   }

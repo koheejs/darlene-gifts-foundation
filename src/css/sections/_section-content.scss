@@ -122,8 +122,10 @@ $spacing: 8%;
 
 #section-4 {
   .title {
-    font-size: 6rem;
+    font-size: 8rem;
     line-height: 0.85;
+    font-family: 'Jarkata';
+    text-align: center;
 
     @include breakpoint($breakpoint-sm) {
       font-size: 3.6rem;
@@ -397,6 +399,10 @@ $spacing: 8%;
 
 #section-18 {
   padding-left: $spacing;
+
+  .body-text-3 {
+    max-width: 560px;
+  }
 
   @include breakpoint($breakpoint-sm) {
     padding-left: 0;

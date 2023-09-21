@@ -839,8 +839,8 @@ section .content {
 #section-13 {
   padding-left: 8%;
 }
-#section-13 .intro {
-  max-width: 470px;
+#section-13 .body-text-2 {
+  max-width: 500px;
 }
 
 #section-14 .content {
@@ -863,7 +863,7 @@ section .content {
   font-weight: 400;
 }
 #section-14 .body-text-2 {
-  max-width: 510px;
+  max-width: 450px;
 }
 #section-14 .half-bg {
   left: 0;

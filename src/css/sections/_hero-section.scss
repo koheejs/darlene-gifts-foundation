@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center;
 
+  @include sectionMobileHeight();
   @include breakpoint($breakpoint-xs) {
     padding: 8rem 0 4rem;
   }

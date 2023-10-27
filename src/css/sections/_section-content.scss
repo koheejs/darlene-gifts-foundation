@@ -112,9 +112,17 @@ $spacing: 8%;
     }
 
     @include breakpoint($breakpoint-xs) {
+      padding: 0 3rem;
       display: block;
       .left-col {
-        margin-bottom: 6rem;
+        margin: 6rem 0;
+      }
+
+      .left-col,
+      .right-col {
+        img {
+          max-width: none;
+        }
       }
     }
   }
@@ -171,6 +179,8 @@ $spacing: 8%;
   }
 
   @include breakpoint($breakpoint-xs) {
+    padding-left: 0;
+
     .content {
       display: block;
       .left-col {
@@ -197,6 +207,10 @@ $spacing: 8%;
 
 #section-7 {
   padding-left: $spacing;
+
+  @include breakpoint($breakpoint-xs) {
+    padding-left: 0;
+  }
 }
 
 #section-9 {
@@ -243,6 +257,10 @@ $spacing: 8%;
 
 #section-13 {
   padding-left: $spacing;
+
+  @include breakpoint($breakpoint-xs) {
+    padding-left: 0;
+  }
 
   .body-text-2 {
     max-width: 500px;
@@ -308,6 +326,12 @@ $spacing: 8%;
 
       @include breakpoint($breakpoint-xs) {
         gap: 2rem;
+
+        .box {
+          img {
+            max-width: 100%;
+          }
+        }
       }
     }
 
@@ -318,6 +342,9 @@ $spacing: 8%;
     .box:last-child {
       flex: 1.7;
       padding-right: 4rem;
+      @include breakpoint($breakpoint-xs) {
+        padding-right: 0;
+      }
     }
 
     .box:nth-child(2) {
@@ -391,6 +418,11 @@ $spacing: 8%;
 
   .left-col {
     padding-right: math.div($spacing, 2);
+
+    @include breakpoint($breakpoint-xs) {
+      padding-right: 0;
+    }
+
     img {
       max-width: 500px;
     }
@@ -473,6 +505,16 @@ $spacing: 8%;
       @include breakpoint($breakpoint-sm) {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      @include breakpoint($breakpoint-xs) {
+        padding: 0;
+
+        .box {
+          img {
+            max-width: 100%;
+          }
+        }
       }
     }
 

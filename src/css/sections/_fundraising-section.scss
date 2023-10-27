@@ -2,6 +2,12 @@
 #fund-raising-2 {
   background-color: var(--black-color);
 
+  @include breakpoint($breakpoint-xs) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .container {
     max-width: 1115px;
   }
@@ -124,5 +130,40 @@
         }
       }
     }
+  }
+
+  @include breakpoint($breakpoint-xs) {
+    .content {
+      .bottom {
+        .intro {
+          font-size: 3rem;
+        }
+        .font-pt {
+          font-size: 3.2em;
+        }
+      }
+    }
+  }
+}
+
+$fundSpacing: 8rem;
+
+#fund-raising {
+  @include screenheight($breakpoint-xs) {
+    margin: $fundSpacing 0;
+  }
+
+  @include breakpoint($breakpoint-xs) {
+    padding: (2 * $fundSpacing) 0 $fundSpacing;
+  }
+}
+
+#fund-raising-2 {
+  @include screenheight($breakpoint-xs) {
+    margin: $fundSpacing 0;
+  }
+
+  @include breakpoint($breakpoint-xs) {
+    padding: $fundSpacing 0 (2 * $fundSpacing);
   }
 }

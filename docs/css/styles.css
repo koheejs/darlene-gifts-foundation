@@ -388,6 +388,16 @@ section .content {
   background-size: cover;
   background-position: center;
 }
+@media only screen and (max-height: 576px) {
+  #hero-section {
+    padding: 8rem 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #hero-section {
+    height: calc(100vh - var(--header-nav-bottom));
+  }
+}
 @media only screen and (max-width: 576px) {
   #hero-section {
     padding: 8rem 0 4rem;
@@ -431,6 +441,14 @@ section .content {
 #fund-raising,
 #fund-raising-2 {
   background-color: var(--black-color);
+}
+@media only screen and (max-width: 576px) {
+  #fund-raising,
+  #fund-raising-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 #fund-raising .container,
 #fund-raising-2 .container {
@@ -549,6 +567,36 @@ section .content {
   #fund-raising-2 .content .bottom .font-pt {
     font-size: 3.6em;
     max-width: 750px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #fund-raising-2 .content .bottom .intro {
+    font-size: 3rem;
+  }
+  #fund-raising-2 .content .bottom .font-pt {
+    font-size: 3.2em;
+  }
+}
+
+@media only screen and (max-height: 576px) {
+  #fund-raising {
+    margin: 8rem 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #fund-raising {
+    padding: 16rem 0 8rem;
+  }
+}
+
+@media only screen and (max-height: 576px) {
+  #fund-raising-2 {
+    margin: 8rem 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #fund-raising-2 {
+    padding: 8rem 0 16rem;
   }
 }
 
@@ -737,10 +785,15 @@ section .content {
 }
 @media only screen and (max-width: 576px) {
   .content-default .content {
+    padding: 0 3rem;
     display: block;
   }
   .content-default .content .left-col {
-    margin-bottom: 6rem;
+    margin: 6rem 0;
+  }
+  .content-default .content .left-col img,
+  .content-default .content .right-col img {
+    max-width: none;
   }
 }
 
@@ -787,6 +840,9 @@ section .content {
   }
 }
 @media only screen and (max-width: 576px) {
+  #section-6 {
+    padding-left: 0;
+  }
   #section-6 .content {
     display: block;
   }
@@ -809,6 +865,11 @@ section .content {
 
 #section-7 {
   padding-left: 8%;
+}
+@media only screen and (max-width: 576px) {
+  #section-7 {
+    padding-left: 0;
+  }
 }
 
 #section-9 .content {
@@ -848,6 +909,11 @@ section .content {
 
 #section-13 {
   padding-left: 8%;
+}
+@media only screen and (max-width: 576px) {
+  #section-13 {
+    padding-left: 0;
+  }
 }
 #section-13 .body-text-2 {
   max-width: 500px;
@@ -904,6 +970,9 @@ section .content {
   #section-15 .content .left-col {
     gap: 2rem;
   }
+  #section-15 .content .left-col .box img {
+    max-width: 100%;
+  }
 }
 #section-15 .content .box:first-child {
   flex: 1.38;
@@ -911,6 +980,11 @@ section .content {
 #section-15 .content .box:last-child {
   flex: 1.7;
   padding-right: 4rem;
+}
+@media only screen and (max-width: 576px) {
+  #section-15 .content .box:last-child {
+    padding-right: 0;
+  }
 }
 #section-15 .content .box:nth-child(2) {
   flex: 1;
@@ -968,6 +1042,11 @@ section .content {
 }
 #section-17 .left-col {
   padding-right: 4%;
+}
+@media only screen and (max-width: 576px) {
+  #section-17 .left-col {
+    padding-right: 0;
+  }
 }
 #section-17 .left-col img {
   max-width: 500px;
@@ -1041,6 +1120,14 @@ section .content {
   #section-21-2 .content .left-col {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #section-21-2 .content .left-col {
+    padding: 0;
+  }
+  #section-21-2 .content .left-col .box img {
+    max-width: 100%;
   }
 }
 #section-21-2 .content .box:first-child {
@@ -1235,6 +1322,11 @@ section .content {
 }
 #section-23 .content .col:not(:last-child) {
   border-right: 1px solid var(--white-color);
+}
+@media only screen and (max-width: 576px) {
+  #section-23 .content .col {
+    padding: 0 2rem;
+  }
 }
 #section-23 .content .wrapper {
   width: 100%;

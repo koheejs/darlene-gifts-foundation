@@ -42,3 +42,13 @@ $dark-color: #081925;
   font-family: 'PTSerif';
   font-style: italic;
 }
+
+@mixin sectionMobileHeight() {
+  @include screenheight($breakpoint-xs) {
+    padding: 8rem 0;
+  }
+
+  @include breakpoint($breakpoint-xs) {
+    height: calc(100vh - var(--header-nav-bottom));
+  }
+}

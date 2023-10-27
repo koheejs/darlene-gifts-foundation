@@ -93,6 +93,10 @@
       &:not(:last-child) {
         border-right: 1px solid var(--white-color);
       }
+
+      @include breakpoint($breakpoint-xs) {
+        padding: 0 2rem;
+      }
     }
 
     .wrapper {

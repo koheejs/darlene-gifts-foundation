@@ -129,6 +129,15 @@ $spacing: 8%;
 }
 
 #section-4 {
+  @include breakpoint($breakpoint-sm) {
+    .left-col,
+    .right-col {
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   .title {
     font-size: 8rem;
     line-height: 0.85;
@@ -194,17 +203,6 @@ $spacing: 8%;
   }
 }
 
-#section-4 {
-  @include breakpoint($breakpoint-sm) {
-    .left-col,
-    .right-col {
-      width: auto;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-}
-
 #section-7 {
   padding-left: $spacing;
 
@@ -233,6 +231,15 @@ $spacing: 8%;
     left: 0;
     right: 50%;
   }
+
+  @include breakpoint($breakpoint-xs) {
+    .left-col {
+      margin: 0;
+    }
+    .half-bg {
+      margin: 10rem 0 4rem;
+    }
+  }
 }
 
 #section-11 {
@@ -252,6 +259,10 @@ $spacing: 8%;
       margin-left: auto;
       margin-right: auto;
     }
+  }
+
+  @include breakpoint($breakpoint-xs) {
+    padding-bottom: 12rem;
   }
 }
 
@@ -300,6 +311,16 @@ $spacing: 8%;
     left: 0;
     right: 50%;
   }
+
+  @include breakpoint($breakpoint-xs) {
+    .left-col {
+      margin: 0;
+    }
+
+    .half-bg {
+      margin: 8rem 0 0;
+    }
+  }
 }
 
 #section-15 {
@@ -326,10 +347,15 @@ $spacing: 8%;
 
       @include breakpoint($breakpoint-xs) {
         gap: 2rem;
+        margin: 0 0;
 
         .box {
           img {
             max-width: 100%;
+          }
+
+          &:last-child {
+            margin-top: 6rem;
           }
         }
       }
@@ -402,6 +428,12 @@ $spacing: 8%;
     .body-text-2 {
       max-width: 500px;
     }
+
+    @include breakpoint($breakpoint-xs) {
+      .left-col {
+        margin-top: 0;
+      }
+    }
   }
 }
 
@@ -411,8 +443,14 @@ $spacing: 8%;
   }
 
   @include breakpoint($breakpoint-xs) {
+    .left-col {
+      margin-top: 0;
+      margin-bottom: 4rem;
+    }
+
     .half-bg {
       top: 55%;
+      margin-bottom: 0;
     }
   }
 
@@ -461,6 +499,12 @@ $spacing: 8%;
   .body-text-1 {
     max-width: 580px;
   }
+
+  @include breakpoint($breakpoint-xs) {
+    .left-col {
+      margin-top: 0;
+    }
+  }
 }
 
 #section-19 {
@@ -479,6 +523,17 @@ $spacing: 8%;
     }
   }
 
+  @include breakpoint($breakpoint-xs) {
+    .left-col {
+      margin-top: 0;
+      margin-bottom: 4rem;
+    }
+
+    .half-bg {
+      margin-bottom: 0;
+    }
+  }
+
   .body-text-2 {
     max-width: 480px;
   }
@@ -488,9 +543,20 @@ $spacing: 8%;
   .body-text-2 {
     max-width: 600px;
   }
+
+  @include breakpoint($breakpoint-xs) {
+    .left-col {
+      margin-top: 0;
+    }
+  }
 }
 
 #section-21-2 {
+  @include breakpoint($breakpoint-xs) {
+    padding-top: 0;
+    padding-bottom: 8rem;
+  }
+
   .content {
     justify-content: space-between;
 
@@ -509,6 +575,7 @@ $spacing: 8%;
 
       @include breakpoint($breakpoint-xs) {
         padding: 0;
+        margin: 0;
 
         .box {
           img {

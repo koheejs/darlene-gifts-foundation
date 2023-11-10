@@ -129,6 +129,10 @@
         }
       }
     }
+
+    @include breakpoint($breakpoint-xs) {
+      padding-bottom: 0;
+    }
   }
 }
 

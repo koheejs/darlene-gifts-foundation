@@ -426,7 +426,7 @@ section .content {
 }
 @media only screen and (max-width: 576px) {
   #hero-section .content .intro {
-    font-size: 4em;
+    font-size: 3.2em;
   }
 }
 @media only screen and (max-height: 576px) {
@@ -797,6 +797,14 @@ section .content {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  #section-4 .left-col,
+  #section-4 .right-col {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 #section-4 .title {
   font-size: 8rem;
   line-height: 0.85;
@@ -854,15 +862,6 @@ section .content {
   padding-right: 4rem;
 }
 
-@media only screen and (max-width: 768px) {
-  #section-4 .left-col,
-  #section-4 .right-col {
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 #section-7 {
   padding-left: 8%;
 }
@@ -890,6 +889,14 @@ section .content {
   left: 0;
   right: 50%;
 }
+@media only screen and (max-width: 576px) {
+  #section-10 .left-col {
+    margin: 0;
+  }
+  #section-10 .half-bg {
+    margin: 10rem 0 4rem;
+  }
+}
 
 #section-11 .content {
   padding-right: 8%;
@@ -904,6 +911,11 @@ section .content {
     width: auto;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #section-11 {
+    padding-bottom: 12rem;
   }
 }
 
@@ -945,6 +957,14 @@ section .content {
   left: 0;
   right: 50%;
 }
+@media only screen and (max-width: 576px) {
+  #section-14 .left-col {
+    margin: 0;
+  }
+  #section-14 .half-bg {
+    margin: 8rem 0 0;
+  }
+}
 
 #section-15 .content {
   justify-content: space-between;
@@ -969,9 +989,13 @@ section .content {
 @media only screen and (max-width: 576px) {
   #section-15 .content .left-col {
     gap: 2rem;
+    margin: 0 0;
   }
   #section-15 .content .left-col .box img {
     max-width: 100%;
+  }
+  #section-15 .content .left-col .box:last-child {
+    margin-top: 6rem;
   }
 }
 #section-15 .content .box:first-child {
@@ -1031,13 +1055,23 @@ section .content {
 #section-16 .content .body-text-2 {
   max-width: 500px;
 }
+@media only screen and (max-width: 576px) {
+  #section-16 .content .left-col {
+    margin-top: 0;
+  }
+}
 
 #section-17 .half-bg {
   background-image: url("../assets/images/section17-bg.png");
 }
 @media only screen and (max-width: 576px) {
+  #section-17 .left-col {
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
   #section-17 .half-bg {
     top: 55%;
+    margin-bottom: 0;
   }
 }
 #section-17 .left-col {
@@ -1082,6 +1116,11 @@ section .content {
 #section-18 .body-text-1 {
   max-width: 580px;
 }
+@media only screen and (max-width: 576px) {
+  #section-18 .left-col {
+    margin-top: 0;
+  }
+}
 
 #section-19 .title {
   font-size: 3rem;
@@ -1097,6 +1136,15 @@ section .content {
     width: 100%;
   }
 }
+@media only screen and (max-width: 576px) {
+  #section-19 .left-col {
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+  #section-19 .half-bg {
+    margin-bottom: 0;
+  }
+}
 #section-19 .body-text-2 {
   max-width: 480px;
 }
@@ -1104,7 +1152,18 @@ section .content {
 #section-20 .body-text-2 {
   max-width: 600px;
 }
+@media only screen and (max-width: 576px) {
+  #section-20 .left-col {
+    margin-top: 0;
+  }
+}
 
+@media only screen and (max-width: 576px) {
+  #section-21-2 {
+    padding-top: 0;
+    padding-bottom: 8rem;
+  }
+}
 #section-21-2 .content {
   justify-content: space-between;
 }
@@ -1125,6 +1184,7 @@ section .content {
 @media only screen and (max-width: 576px) {
   #section-21-2 .content .left-col {
     padding: 0;
+    margin: 0;
   }
   #section-21-2 .content .left-col .box img {
     max-width: 100%;
@@ -1354,6 +1414,11 @@ section .content {
   }
   #section-23 .content .col:not(:last-child) {
     border: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #section-23 .content {
+    padding-bottom: 0;
   }
 }
 

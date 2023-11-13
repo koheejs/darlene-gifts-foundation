@@ -6,36 +6,49 @@
  * =================================================================
  */
 
-(function headerNavigator() {
-  let isActive = false;
-  const classActive = 'active';
-  const menuButton = document.querySelector('.menu-button');
-  const navigation = document.querySelector('.site-nav');
+function initAOS() {
+  AOS.init({
+    delay: 100,
+    duration: 400,
+    easing: 'ease-out',
+    offset: 10,
+    once: true,
+  });
+}
 
-  function toggleMenu() {
-    navigation.classList.toggle(classActive);
-    isActive = !isActive;
-    menuButton.textContent = isActive ? 'CLOSE' : 'MENU';
+/**
+ * Updates the attribute name of an HTML element by removing the old attribute and adding a new attribute with the same value.
+ * @param {HTMLElement} element - The HTML element whose attribute needs to be updated.
+ * @param {string} from - The name of the old attribute.
+ * @param {string} to - The name of the new attribute.
+ */
+function updateAttributeName(element, from, to) {
+  const value = element.getAttribute(from);
+  element.removeAttribute(from);
+  element.setAttribute(to, value);
+}
+
+/**
+ * Initializes an animation using the Anime.js library on a specified wrapper element.
+ * @param {HTMLElement} wrapperElement - The wrapper element on which the animation will be initialized.
+ */
+function initAnime(wrapperElement) {
+  const fading = anime.timeline({ opacity: [0, 1], duration: 4000 });
+  const effectElements = wrapperElement.querySelectorAll('[data-anime]');
+
+  for (let item in effectElements) {
+    fading.add(
+      { targets: effectElements[item], opacity: [0, 1] },
+      item > 0 ? '-=3000' : 0
+    );
   }
-
-  menuButton.addEventListener('click', function () {
-    toggleMenu();
-  });
-
-  const navigationItems = navigation.querySelectorAll('a');
-  navigationItems.forEach(function (item) {
-    item.addEventListener('click', function () {
-      toggleMenu();
-    });
-  });
-})();
+}
 
 (function scrollEffect() {
   let swiper;
-  const Class = {
-    SWIPER: 'swiper',
-    WRAPPER: 'swiper-wrapper',
-  };
+  let maxIndex = 0;
+
+  const Class = { SWIPER: 'swiper', WRAPPER: 'swiper-wrapper' };
 
   const mainElement = document.querySelector('main');
   const wrapper = mainElement.firstElementChild;
@@ -51,6 +64,28 @@
       breakpoints: {
         768: {
           direction: 'horizontal',
+        },
+      },
+      on: {
+        init: function (swiper) {
+          document.querySelectorAll('[data-aos]').forEach((item) => {
+            updateAttributeName(item, 'data-aos', 'data-anime');
+            item.style.opacity = 0;
+          });
+
+          initAnime(swiper.slides[0]);
+        },
+        destroy: function () {
+          document.querySelectorAll('[data-anime]').forEach((item) => {
+            updateAttributeName(item, 'data-anime', 'data-aos');
+          });
+        },
+        activeIndexChange: function (swiper) {
+          if (swiper.activeIndex <= maxIndex) return;
+          maxIndex = swiper.activeIndex;
+
+          const activeSlide = swiper.slides[swiper.activeIndex];
+          initAnime(activeSlide);
         },
       },
     });
@@ -83,6 +118,7 @@
 
     if (windowWidth < 768 || windowHeight < 400) {
       destroySwiper();
+      initAOS();
       mainElement.classList.remove(Class.SWIPER);
       wrapper.classList.remove(Class.WRAPPER);
     } else {
@@ -98,27 +134,53 @@
   initMenuWithSwipper();
 })();
 
-(function () {
+/**
+ * Toggles the visibility of a navigation menu and updates the button text accordingly.
+ * Closes the menu when a navigation item is clicked.
+ */
+(function headerNavigator() {
+  const classActive = 'active';
+  const menuButton = document.querySelector('.menu-button');
+  const navigation = document.querySelector('.site-nav');
+
+  // Toggles the menu visibility and updates the button text.
+  function toggleMenu() {
+    navigation.classList.toggle(classActive);
+    menuButton.textContent = navigation.classList.contains(classActive)
+      ? 'CLOSE'
+      : 'MENU';
+  }
+
+  menuButton.addEventListener('click', toggleMenu);
+
+  const navigationItems = navigation.querySelectorAll('a');
+  navigationItems.forEach(function (item) {
+    item.addEventListener('click', toggleMenu);
+  });
+})();
+
+/**
+ * Adjusts the height of columns within a specific section of a webpage to be the same height as the tallest column.
+ */
+(function adjustSameHeight() {
   const section23 = document.getElementById('section-23');
   if (!section23) return;
 
-  const columns = section23.getElementsByClassName('wrapper');
-  const arrayColumns = Array.from(columns);
+  const columns = Array.from(section23.getElementsByClassName('wrapper'));
 
+  // Adjusts the height of the columns.
   function adjustSectionHeight() {
-    arrayColumns.forEach((element) => {
-      element.removeAttribute('style');
+    columns.forEach((element) => {
+      element.style.height = '';
     });
 
     if (window.innerWidth <= 992) return;
 
-    let maxHeight = arrayColumns[0].clientHeight;
+    const maxHeight = columns.reduce((maxHeight, element) => {
+      return Math.max(maxHeight, element.clientHeight);
+    }, 0);
 
-    arrayColumns.forEach((element) => {
-      maxHeight = Math.max(maxHeight, element.clientHeight);
-    });
-
-    arrayColumns.forEach((element) => {
+    columns.forEach((element) => {
       element.style.height = `${Math.ceil(maxHeight)}px`;
     });
   }
@@ -127,6 +189,10 @@
   window.dispatchEvent(new Event('resize'));
 })();
 
+/**
+ * Adds an event listener to a video cover element.
+ * When the cover is clicked, it hides the cover and reveals the video iframe.
+ */
 (function video() {
   const section8 = document.getElementById('section-8');
   if (!section8) return;

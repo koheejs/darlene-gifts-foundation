@@ -1280,8 +1280,11 @@ section .content {
   justify-content: center;
   font-size: 12px;
 }
+#section-22 .content {
+  width: fit-content;
+}
 #section-22 .content .intro {
-  font-size: 6em;
+  font-size: min(6rem, 4.1vw);
   line-height: 1.183;
 }
 @media only screen and (max-width: 768px) {

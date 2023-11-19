@@ -81,8 +81,9 @@
   }
 
   .content {
+    width: fit-content;
     .intro {
-      font-size: 6em;
+      font-size: min(6rem, 4.1vw);
       line-height: 1.183;
     }
 
